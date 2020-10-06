@@ -3,16 +3,16 @@ maintained by: @hkdb
 
 ![screenshot](screenshot.png)
 
-## SUMMARY
+### SUMMARY
 
 If you do what I do as described [here](https://medium.com/@hkdb/custom-gtk3-theme-for-flatpak-6d2c216e1496) to sync your custom theme with Flatpak apps, everytime your flatpak apps get updated, your theme folder gets deleted from the flapak Gnome runtime folder and your flatpak apps go back to the default theme that's out of sync with what you are using in Gnome. Here's a quick script to sync your custom theme with flatpak apps after they get updated to make it a little easier.
 
-## DEPENDENCIES
+### DEPENDENCIES
 
 - Gnome Desktop 3.3x running 64-bit
 - Python 3.x
 
-## USAGE
+### USAGE
 
 1. `git clone git@github.com:hkdb/gnome-ftu.git`
 2. `cd gnome-ftu`
