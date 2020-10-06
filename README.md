@@ -15,7 +15,7 @@ If you do what I do as described [here](https://medium.com/@hkdb/custom-gtk3-the
 ## USAGE
 
 1. `git clone git@github.com:hkdb/gnome-ftu.git`
-2. `cd gnome-ftu
+2. `cd gnome-ftu`
 3. `./gftu.py`
 
 If you want to make things easier and execute this globally inside your terminal, you can do the following to alias it:

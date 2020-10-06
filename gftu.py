@@ -2,11 +2,11 @@
 
 ###############################################################
 ### PROJECT:
-### Flatpak Custom Theme Update
+### Gnome Flatpak Custom Theme Updater
 ### SCRIPT:
-### ftu.py
+### gftu.py
 ### DESCRIPTION:
-### Automated custom theme update for Flatpak Apps
+### Automated custom theme update for Flatpak Apps in Gnome
 ###
 ### MAINTAINED BY:
 ### hkdb <hkdb@3df.io>
