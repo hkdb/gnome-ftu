@@ -29,17 +29,23 @@ print("THEME: " + theme)
 
 # Check what theme folders in flatpak exists
 print("\nChecking Flatpak Gnome Platform Dependencies...")
-platforms = os.listdir(homedir + "/.local/share/flatpak/runtime/org.gnome.Platform/x86_64/")
-for p in platforms:
+sys_platforms_g = os.listdir("/var/lib/flatpak/runtime/org.gnome.Platform/x86_64/")
+for p in sys_platforms_g:
     print("Gnome " + p)
+
+# repeat same for freedesktop apps
+print("\nChecking Flatpak Freedesktop Platform Dependencies...")
+sys_platforms_fd = os.listdir("/var/lib/flatpak/runtime/org.freedesktop.Platform/x86_64/")
+for p in sys_platforms_fd:
+    print("Freedesktop " + p)
 
 # Check on where theme exists
 orig = ""
 print("\nChecking to see where the theme dir is...")
-home = os.path.isdir(homedir+"/.local/share/themes/"+theme)
+home = os.path.isdir(homedir+"/.themes/"+theme)
 print("HOME: ", home)
 if home == True:
-    orig = homedir+"/.local/share/themes/"+theme
+    orig = homedir+"/.themes/"+theme
 else:
     system = os.path.isdir("/usr/share/themes/"+theme)
     print("SYSTEM: ", system)
@@ -50,10 +56,15 @@ else:
         exit()
 
 # copy theme over to all available platforms
-print("\nCopying theme to all available platforms...")
-for p in platforms:
-    print("COPYING TO: ",  p)
-    os.system("cp -R " + orig + " " + homedir + "/.local/share/flatpak/runtime/org.gnome.Platform/x86_64/" + p + "/active/files/share/themes/")
-    # print("cp -R " + orig + " " + homedir + "/.local/share/flatpak/runtime/org.gnome.Platform/x86_64/" + p + "/active/files/share/themes/")
+print("\nCopying theme to all available gnome platforms...")
+for p in sys_platforms_g:
+    print("COPYING TO: ","gnome" ,  p)
+    os.system("sudo -H cp -R " + orig + " " + "/var/lib/flatpak/runtime/org.gnome.Platform/x86_64/" + p + "/active/files/share/themes/")
+
+# copy theme over to all available freedesktop platforms
+print("\nCopying theme to all available freedesktop platforms...")
+for p in sys_platforms_fd:
+    print("COPYING TO: ","freedesktop" ,  p)
+    os.system("sudo -H cp -R " + orig + " " + "/var/lib/flatpak/runtime/org.freedesktop.Platform/x86_64/" + p + "/active/files/share/themes/")
 
 print("\nDONE...\n")
