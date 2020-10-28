@@ -23,9 +23,9 @@ def copyTheme(runtime_path, namespace, platforms, theme_path):
     for p in platforms:
         dest = runtime_path + "org." + namespace + ".Platform/x86_64/" + p + "/active/files/share/themes/"
         print("\nCOPYING TO: ", dest)
-        command = "sudo -H cp -R " + theme_path + " " + dest
+        command = "pkexec cp -R " + theme_path + " " + dest
         print(command)
-        os.system("sudo -H cp -R " + theme_path + " " + dest)
+        os.system("pkexec cp -R " + theme_path + " " + dest)
 
 # Get HomeDir
 homedir = str(Path.home())
