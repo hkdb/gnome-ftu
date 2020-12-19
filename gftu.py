@@ -44,7 +44,7 @@ else:
     system = os.path.isdir("/usr/share/themes/"+theme)
     print("SYSTEM: ", system)
     if system == True:
-        orig = "/usr/share/theme/"+theme
+        orig = "/usr/share/themes/"+theme
     else:
         print("ERROR: No such theme available in the 2 common places to find them. Please move your theme folder to either ~/.local/share/themes/ or /usr/share/themes/ and try again.\n")
         exit()
