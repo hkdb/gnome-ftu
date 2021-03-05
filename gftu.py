@@ -61,7 +61,7 @@ elif os.path.isdir(homedir+"/.local/share/themes/"+theme) == True:
     theme_path = homedir+"/.local/share/themes/"+theme
 else:
     if os.path.isdir("/usr/share/themes/"+theme) == True:
-        theme_path = "/usr/share/theme/"+theme
+        theme_path = "/usr/share/themes/"+theme
     else:
         print("ERROR: No such theme available in the 3 common places to find them. Please move your theme folder to either ~/.local/share/themes/ , ~/.themes/ or /usr/share/themes/ and try again.\n")
         exit()
