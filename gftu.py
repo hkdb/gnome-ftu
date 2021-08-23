@@ -8,8 +8,10 @@
 ### DESCRIPTION:
 ### Automated custom theme update for Flatpak Apps in Gnome
 ###
-### MAINTAINED BY:
+### UPSTREAM MAINTAINED BY:
 ### hkdb <hkdb@3df.io>
+### FORK MAINTAINED BY:
+### crnisamuraj <m1ivancevic@gmail.com>
 ### ############################################################
 
 import os, datetime, sys, glob, shutil, string
