@@ -94,6 +94,9 @@ for r in runtime:
             print(p)
         copyTheme(r, namespace, platforms_fd, theme_path)
 
+print("\nCopy gtk settings.ini to ~/.var/app/...\n")
+os.system("./gconf.sh")
+
 print("\nDONE...\n")
 
 exit()
