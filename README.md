@@ -3,6 +3,22 @@ maintained by: @hkdb
 
 ![screenshot](screenshot.png)
 
+
+## *** DEPRECATED & UNMAINTAINED ***
+
+This repo is no longer maintained as it is no longer needed. To have Flatpak apps use your custom themes, You can simply do the following:
+
+```
+sudo flatpak override --env=GTK_THEME=<THEME NAME>
+```
+
+For QT apps, you can use kvantum and run the following command:
+
+```
+sudo flatpak override --env=QT_STYLE_OVERRIDE=kvantum --filesystem=xdg-config/Kvantum:ro
+```
+
+
 ### SUMMARY
 
 If you do what I do as described [here](https://medium.com/@hkdb/custom-gtk3-theme-for-flatpak-6d2c216e1496) to sync your custom theme with Flatpak apps, everytime your flatpak apps get updated, your theme folder gets deleted from the flapak Gnome runtime folder and your flatpak apps go back to the default theme that's out of sync with what you are using in Gnome. Here's a quick script to sync your custom theme with flatpak apps after they get updated to make it a little easier.
